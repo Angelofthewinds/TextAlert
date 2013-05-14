@@ -1,0 +1,28 @@
+#log debug messages to console
+logtoconsole: false
+#PHP HTTP Url
+phpurl: 'localhost:25560'
+
+permissions:
+  modrequestgroups:
+  - Mod
+  - Admin
+  opgroup: Operator
+ 
+carriers:
+ #U.S Carriers
+ alltell: '@message.alltel.com'
+ att: '@txt.att.net'
+ boost: '@myboostmobile.com'
+ centennial: '@myblue.com'
+ eistein: '@einsteinmms.com'
+ nextel: '@messaging.nextel.com'
+ sprint: '@messaging.sprintpcs.com'
+ t-mobile: 'tmomail.net'
+ uscellular: '@mms.uscc.net'
+ verizon: '@vtext.com'
+ viring: '@vmobl.com'
+ #Canadian Carriers
+ rogers: '@pcs.rogers.com'
+ 
+numbers:

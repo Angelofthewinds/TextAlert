@@ -1,0 +1,40 @@
+name: TextAlert
+version: 1.0.0
+description: Nxt Text message alert plugin
+author: Thetestgame
+authors: [Thetestgame]
+main: com.nxtinc.thetestgame.textalert.TextAlert
+depend: [Vault]
+
+commands:
+   textalert:
+      description: Text Alert Admin Command
+      usage: /<command> [SubCommand]   
+      permission-message: You don't have permission
+   modrequest:
+      description: Text Alert Mod Eequest Command
+      usage: /<command>   
+      permission-message: You don't have permission to request a mod
+      
+permissions:  
+    textalert.custommessage: 
+        description: Allows the user to send custom messages
+        default: false
+    textalert.personal:
+        description: Allows the user to send messages to one person
+        default: false    
+    textalert.modrequest: 
+        description: Allows the user to use /modrequest
+        default: false
+    textalert.adminrequest: 
+        description: Allows the user to use /adminrequest
+        default: false
+    textalert.oprequest: 
+        description: Allows the user to use /oprequest
+        default: false
+    textalert.op.reload: 
+        description: Allows the user to use /trade reload
+        default: op   
+    textalert.op.version: 
+        description: Allows the user to use /trade version
+        default: op    
