@@ -1,5 +1,6 @@
 package com.nxtinc.thetestgame.textalert;
 
+import java.io.IOException;
 import java.util.logging.Logger;
 
 import net.milkbowl.vault.permission.Permission;
@@ -9,6 +10,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.mcstats.Metrics;
 
 public class TextAlert extends JavaPlugin
 {
@@ -53,6 +55,18 @@ public class TextAlert extends JavaPlugin
 		   {
 			   severe("- Vault dependency not found! Disabling");
 			   pm.disablePlugin(this);
+		   }
+		   
+		   //* Setup Metrics
+		   try {
+			   Metrics metrics = new Metrics(this);
+			   info("- Metrics Enabled!");
+			   metrics.start();
+		   } 
+		   catch (IOException e) 
+		   {
+			   severe("Unable to start metrics!");
+			   e.printStackTrace();
 		   }
 		   
 		   CommandExtender commandextender = new CommandExtender(this);
